@@ -1,27 +1,8 @@
-/*import React, { useState } from 'react';
-
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  return (
-    <div>
-      <h2>Contador</h2>
-      <p>El valor actual es: {count}</p>
-      <button onClick={increment}>Incrementar</button>
-    </div>
-  );
-};
-
-export default Counter;*/
-
+'use client'
 import React, { useState } from 'react';
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); 
 
   const increment = () => {
     setCount(count + 1);
@@ -32,11 +13,13 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <h2>Contador</h2>
-      <p>El valor actual es: {count}</p>
-      <button onClick={increment}>Incrementar</button>
-      <button onClick={reset}>Resetear</button>
+    <div className="flex justify-center items-center h-screen">
+      <div>
+        <strong><h2 className="text-center">CONTADOR</h2></strong>
+        <p className="text-center">El valor actual es: {count}</p>
+        <button onClick={increment} className="bg-pink-500 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Incrementar</button>
+        <button onClick={reset} className="bg-pink-500 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">Reiniciar</button>
+      </div>
     </div>
   );
 };
